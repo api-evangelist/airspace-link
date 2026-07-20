@@ -1,0 +1,35 @@
+generated: '2026-07-18'
+method: searched
+source: https://developers.airspacelink.com/doc-2002712
+docs: https://developers.airspacelink.com/doc-2002712
+summary:
+  types: [oauth2, apiKey]
+  api_key_in: [header]
+  api_key_name: x-api-key
+  oauth2_flows: [clientCredentials]
+notes: >-
+  AirHub API requires BOTH an OAuth 2.0 client-credentials access token (sent in
+  the Authorization header) AND an x-api-key header on every request. Client id
+  and client secret are supplied by Airspace Link (not self-service). The OAuth
+  token response is wrapped in the standard AirHub envelope
+  ({ data: { accessToken, expires }, message, statusCode }).
+schemes:
+- name: OAuth2ClientCredentials
+  type: oauth2
+  flow: clientCredentials
+  tokenUrl: https://airhub-api-sandbox.airspacelink.com/v1/oauth/token
+  grant_type: client_credentials
+  request_content_type: application/x-www-form-urlencoded
+  request_params: [grant_type, client_id, client_secret, scope]
+  token_field: data.accessToken
+  sent_in: Authorization header
+  sources: [searched:doc-2002712, searched:api-31492994]
+- name: ApiKeyHeader
+  type: apiKey
+  in: header
+  name: x-api-key
+  required: true
+  sources: [searched:doc-2002712]
+environments:
+  sandbox: https://airhub-api-sandbox.airspacelink.com
+  live: https://airhub-api.airspacelink.com
