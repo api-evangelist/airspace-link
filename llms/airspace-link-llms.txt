@@ -1,0 +1,47 @@
+# AirHub API
+
+## Docs
+- [Introduction](https://developers.airspacelink.com/doc-521691.md): 
+- Authentication [Overview](https://developers.airspacelink.com/doc-2002712.md): 
+- Briefing [Overview](https://developers.airspacelink.com/doc-918717.md): 
+- Briefing > B4UFLY [What Is B4UFLY](https://developers.airspacelink.com/doc-918763.md): 
+- Briefing > B4UFLY [The API Basics](https://developers.airspacelink.com/doc-918767.md): 
+- Briefing > B4UFLY [Location vs Area](https://developers.airspacelink.com/doc-918764.md): 
+- Briefing > B4UFLY [What's New in v2](https://developers.airspacelink.com/doc-935866.md): 
+- Operations > LAANC SDSP [Overview](https://developers.airspacelink.com/doc-706838.md): 
+- Surface, Risk, and Routing [Overview](https://developers.airspacelink.com/doc-1278495.md): 
+- Vector Tiles [Overview](https://developers.airspacelink.com/doc-670348.md): 
+
+## API Docs
+- Authentication [Get Oauth Token](https://developers.airspacelink.com/api-31492994.md): An OAuth token is a credential that grants authorized access to protected resources, allowing applications to authenticate and perform actions on behalf of a user without exposing their login information.
+- Briefing > B4UFLY > v2 [B4UFLY Briefing By Area](https://developers.airspacelink.com/api-29744367.md): **Scope:** `briefing:area:read`
+- Briefing > B4UFLY > v2 [B4UFLY Briefing By Location](https://developers.airspacelink.com/api-29744368.md): **Scope:** `briefing:location:read`
+- Briefing > B4UFLY > v1 [B4UFLY Briefing By Area](https://developers.airspacelink.com/api-29744365.md): **Scope:** `briefing:area:read`
+- Briefing > B4UFLY > v1 [B4UFLY Briefing By Location](https://developers.airspacelink.com/api-29744366.md): **Scope:** `briefing:location:read`
+- Data > Positions [Send Positions](https://developers.airspacelink.com/api-29882511.md): Send positions to the Airspace Link position telemetry pipeline.
+- Data > Elevation v1 [Elevation](https://developers.airspacelink.com/api-29882509.md): Get elevation.
+- Data > Elevation v2 [Elevation](https://developers.airspacelink.com/api-29882510.md): Get elevation.
+- Operations > ASL Operations [List Operations](https://developers.airspacelink.com/api-29873889.md): **Scope:** `operation:read`
+- Operations > ASL Operations [Create Operation](https://developers.airspacelink.com/api-29873890.md): **Scope:** `operation:create`
+- Operations > ASL Operations [Get Operation](https://developers.airspacelink.com/api-29873891.md): **Scope:** `operation:read`
+- Operations > ASL Operations [Delete Operation](https://developers.airspacelink.com/api-29873892.md): **Scope:** `operation:delete`
+- Operations > ASL Operations [Update Operation](https://developers.airspacelink.com/api-29873893.md): **Scope:** `operation:update`
+- Operations > LAANC SDSP > LAANC Operations [Get Operation](https://developers.airspacelink.com/api-10829370.md): **Scope:** `laanc:read`
+- Operations > LAANC SDSP > LAANC Operations [Delete Operation](https://developers.airspacelink.com/api-10829371.md): **Scope:** `laanc:delete`
+- Operations > LAANC SDSP > LAANC Operations [Create Operation](https://developers.airspacelink.com/api-10829372.md): **Scope:** `laanc:create`
+- Operations > LAANC SDSP > LAANC Operations [Update Operation](https://developers.airspacelink.com/api-10829373.md): **Scope:** `laanc:update`
+- Operations > LAANC SDSP > LAANC Authorizations [Rescinded and Invalid Operations](https://developers.airspacelink.com/api-29742695.md): **Scope:** `laanc:read`
+- Operations > LAANC SDSP > LAANC Authorizations [Submit Authorization](https://developers.airspacelink.com/api-29742696.md): **Scope:** `laanc:create`
+- Operations > LAANC SDSP > LAANC Authorizations [Get Authorization](https://developers.airspacelink.com/api-29742697.md): **Scope:** `laanc:read`
+- Operations > LAANC SDSP > LAANC Authorizations [Cancel Authorization](https://developers.airspacelink.com/api-29742698.md): **Scope:** `laanc:update`
+- Operations > LAANC SDSP > LAANC Authorizations [Cancel Invalid Authorization](https://developers.airspacelink.com/api-29742699.md): **Scope:** `laanc:update`
+- Operations > LAANC SDSP > LAANC Authorizations [Close Authorization](https://developers.airspacelink.com/api-29742700.md): **Scope:** `laanc:update`
+- Operations > LAANC SDSP > LAANC Authorizations [Acknowledge Rescinded Authorization](https://developers.airspacelink.com/api-29742701.md): **Scope:** `laanc:update`
+- Operations > Ephemeral Operations [Create Ephemeral Operations](https://developers.airspacelink.com/api-29886782.md): **Scope:** `operation:create`
+- Operations > Ephemeral Operations [Get Ephemeral Operation](https://developers.airspacelink.com/api-29886783.md): **Scope:** `operation:read`
+- Operations > Ephemeral Operations [Delete Ephemeral Operation](https://developers.airspacelink.com/api-29886784.md): **Scope:** `operation:delete`
+- Operations > Ephemeral Operations [Claim Ephemeral Operation](https://developers.airspacelink.com/api-29886785.md): **Scope:** `operation:read operation:create`
+- Surface, Risk, and Routing > Surface Layers [Get Surface Layer Access](https://developers.airspacelink.com/api-31256372.md): **Scope:** `surface:create`
+- Surface, Risk, and Routing > Risk and Routing [Classify Risk](https://developers.airspacelink.com/api-31492643.md): **Scope:** `surface:create`
+- Surface, Risk, and Routing > Risk and Routing [Generate Route](https://developers.airspacelink.com/api-31492641.md): **Scope:** `route:create`
+- Surface, Risk, and Routing > Risk and Routing [Surface Hexbin](https://developers.airspacelink.com/api-31492639.md): **Scope:** `surface:create`

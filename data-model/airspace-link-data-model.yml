@@ -1,0 +1,61 @@
+generated: '2026-07-18'
+method: derived
+source: https://developers.airspacelink.com/llms.txt
+note: >-
+  Entity graph derived from the documented AirHub API operations and response
+  shapes (developers.airspacelink.com). No OpenAPI file is published, so
+  relationships are inferred from operation groupings and documented fields.
+entities:
+- name: Operation
+  domain: Operations
+  description: An ASL global drone operation.
+  operations: [list, create, get, update, delete]
+- name: EphemeralOperation
+  domain: Operations
+  description: A short-lived operation that can be created, claimed, retrieved, and deleted.
+  operations: [create, get, claim, delete]
+- name: LaancOperation
+  domain: Operations/LAANC SDSP
+  description: A LAANC operation tied to a parent ASL global operation.
+  operations: [create, get, update, delete]
+- name: LaancAuthorization
+  domain: Operations/LAANC SDSP
+  description: An FAA LAANC authorization with candidates, notices, status, and ATC codes.
+  operations: [submit, get, cancel, close, acknowledge]
+- name: Briefing
+  domain: Briefing/B4UFLY
+  description: A B4UFLY airspace briefing for an area geometry or a point location.
+  operations: [by_area, by_location]
+- name: Position
+  domain: Data
+  description: Telemetry positions sent to the position pipeline.
+  operations: [send]
+- name: Elevation
+  domain: Data
+  description: Elevation values for a location.
+  operations: [get]
+- name: Surface
+  domain: Surface, Risk, and Routing
+  description: A surface layer used for risk classification and hexbin generation.
+  operations: [get_access, classify_risk, hexbin]
+- name: Route
+  domain: Surface, Risk, and Routing
+  description: A risk-aware generated drone route.
+  operations: [generate]
+relationships:
+- from: LaancOperation
+  to: Operation
+  kind: belongs_to
+  via: parent global operation id
+- from: LaancAuthorization
+  to: LaancOperation
+  kind: belongs_to
+  via: operation
+- from: Route
+  to: Surface
+  kind: has_one
+  via: surface risk classification
+- from: EphemeralOperation
+  to: Operation
+  kind: belongs_to
+  via: claim

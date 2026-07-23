@@ -1,0 +1,16 @@
+generated: '2026-07-18'
+method: generated
+source: https://developers.airspacelink.com/llms.txt
+note: >-
+  Skills are grounded in the real documented AirHub API operations (method,
+  path, scope) from the public developer portal; no OpenAPI operationIds are
+  published, so operations reference the portal's api-* endpoint ids.
+skills:
+- file: airspace-link-b4ufly-briefing.md
+  name: Get a B4UFLY airspace briefing
+  api: https://developers.airspacelink.com/
+  operations: [api-31492994, api-29744368, api-29744367]
+- file: airspace-link-laanc-authorization.md
+  name: Submit and track a LAANC authorization
+  api: https://developers.airspacelink.com/
+  operations: [api-31492994, api-10829372, api-29742696, api-29742697, api-29742698]

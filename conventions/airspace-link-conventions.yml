@@ -1,0 +1,50 @@
+generated: '2026-07-18'
+method: searched
+source: https://developers.airspacelink.com/
+docs: https://developers.airspacelink.com/doc-521691
+authentication:
+  style: oauth2-client-credentials + api-key
+  detail: >-
+    OAuth 2.0 client-credentials bearer token in the Authorization header, plus a
+    required x-api-key header on every request.
+  ref: authentication/airspace-link-authentication.yml
+environments:
+  mode_selector: base-url
+  detail: >-
+    The base URL you use to make requests determines whether the request runs in
+    live mode or sandbox mode.
+  sandbox: https://airhub-api-sandbox.airspacelink.com
+  live: https://airhub-api.airspacelink.com
+  ref: sandbox/airspace-link-sandbox.yml
+versioning:
+  scheme: uri-path
+  detail: Version prefixes appear in the path (e.g. /v1/..., /v2/...). B4UFLY and Elevation expose both v1 and v2.
+  observed_versions: [v1, v2]
+  ref: lifecycle/airspace-link-lifecycle.yml
+response_envelope:
+  shape: '{ data, message, statusCode }'
+  detail: >-
+    Responses are wrapped in a common envelope with a data payload, a human
+    message, and an HTTP statusCode field (observed on the OAuth token response
+    and error responses).
+error_handling:
+  format: envelope
+  detail: >-
+    Errors return the standard envelope with message and statusCode; documented
+    codes include 400, 403 (permission denied), 404 (resource not found), and
+    500 (server error).
+  ref: errors/airspace-link-problem-types.yml
+geospatial:
+  detail: >-
+    Requests operate on point locations and area geometries (briefings by area
+    vs by location); surface, risk, routing, and vector-tile services are
+    geospatial. Elevation and hexbin services support geographic queries.
+idempotency:
+  supported: false
+  detail: No idempotency-key header or contract is documented in the public AirHub API docs.
+pagination:
+  supported: unknown
+  detail: No pagination convention is documented on the public overview pages.
+rate_limiting:
+  supported: unknown
+  detail: No rate-limit headers or published quotas were found in the public docs.

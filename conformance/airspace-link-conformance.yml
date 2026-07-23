@@ -1,0 +1,28 @@
+generated: '2026-07-18'
+method: searched
+source: https://developers.airspacelink.com/doc-2002712
+standards:
+- id: oauth2
+  conforms: true
+  evidence: OAuth 2.0 client-credentials token endpoint at /v1/oauth/token (doc-2002712)
+- id: oauth2-client-credentials
+  conforms: true
+  evidence: grant_type=client_credentials, application/x-www-form-urlencoded token request
+- id: api-key
+  conforms: true
+  evidence: required x-api-key header on every request
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: errors use a proprietary { data, message, statusCode } envelope, not application/problem+json
+- id: rest
+  conforms: true
+  evidence: documented as a REST-based API
+- id: faa-laanc
+  conforms: true
+  evidence: FAA-approved LAANC SDSP operations and authorizations surface
+- id: astm-utm
+  conforms: true
+  evidence: FAA-approved UTM services; InterUSS/ASTM DSS implementation in the GitHub org
+- id: openidconnect
+  conforms: false
+  evidence: no OIDC discovery document found

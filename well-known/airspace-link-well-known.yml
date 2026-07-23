@@ -1,0 +1,18 @@
+generated: '2026-07-18'
+method: searched
+note: >-
+  Probed the .well-known discovery surface on the API, website, and developer
+  hosts. None are published (all 404). Recorded as valid negative data.
+hosts:
+- host: https://airhub-api.airspacelink.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+- host: https://airspacelink.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+- host: https://developers.airspacelink.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}

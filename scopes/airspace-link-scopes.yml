@@ -1,0 +1,54 @@
+generated: '2026-07-18'
+method: searched
+source: https://developers.airspacelink.com/doc-2002712
+docs: https://developers.airspacelink.com/doc-2002712
+schemes:
+- name: OAuth2ClientCredentials
+  flow: clientCredentials
+  tokenUrl: https://airhub-api-sandbox.airspacelink.com/v1/oauth/token
+scopes:
+- scope: advisory:read
+  description: Read airspace advisories.
+  flows: [clientCredentials]
+- scope: aviation:read
+  description: Read aviation airspace data.
+  flows: [clientCredentials]
+- scope: hazard:read
+  description: Read operational hazard data (documented as "hazar:read" in the auth overview).
+  flows: [clientCredentials]
+- scope: briefing:area:read
+  description: Read B4UFLY airspace briefings for an area geometry.
+  flows: [clientCredentials]
+- scope: briefing:location:read
+  description: Read B4UFLY airspace briefings for a point location.
+  flows: [clientCredentials]
+- scope: operation:read
+  description: Read ASL and ephemeral operations.
+  flows: [clientCredentials]
+- scope: operation:create
+  description: Create ASL and ephemeral operations.
+  flows: [clientCredentials]
+- scope: operation:update
+  description: Update ASL operations.
+  flows: [clientCredentials]
+- scope: operation:delete
+  description: Delete ASL and ephemeral operations.
+  flows: [clientCredentials]
+- scope: laanc:read
+  description: Read LAANC SDSP operations and authorizations.
+  flows: [clientCredentials]
+- scope: laanc:create
+  description: Create LAANC operations and submit LAANC authorizations.
+  flows: [clientCredentials]
+- scope: laanc:update
+  description: Update, cancel, close, and acknowledge LAANC operations and authorizations.
+  flows: [clientCredentials]
+- scope: laanc:delete
+  description: Delete LAANC operations.
+  flows: [clientCredentials]
+- scope: surface:create
+  description: Request surface-layer access, classify risk, and generate surface hexbins.
+  flows: [clientCredentials]
+- scope: route:create
+  description: Generate risk-aware drone routes.
+  flows: [clientCredentials]

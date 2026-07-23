@@ -1,0 +1,27 @@
+generated: '2026-07-18'
+method: searched
+source: https://developers.airspacelink.com/
+format: envelope
+envelope:
+  shape: '{ data, message, statusCode }'
+  detail: >-
+    AirHub API errors are returned in the standard response envelope with a
+    human-readable message and an HTTP statusCode; a default error status object
+    is used for unexpected server errors. This is NOT RFC 9457 problem+json.
+problems:
+- status: 400
+  title: Bad Request
+  detail: Invalid request (e.g. malformed OAuth token request).
+  source_operation: api-31492994 Get OAuth Token
+- status: 403
+  title: Permission denied
+  detail: The credentials lack the required scope or access for the operation.
+  source_operation: api-10829370 LAANC Get Operation
+- status: 404
+  title: Resource not found
+  detail: The referenced resource (e.g. operation by id) does not exist.
+  source_operation: api-10829370 LAANC Get Operation
+- status: 500
+  title: Server error
+  detail: Unexpected server error; returned via the default error status object.
+  source_operation: api-31492994 Get OAuth Token

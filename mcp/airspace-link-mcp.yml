@@ -1,0 +1,96 @@
+generated: '2026-07-18'
+method: derived
+status: candidate
+source: https://developers.airspacelink.com/llms.txt
+note: >-
+  No official hosted/remote MCP server was found for Airspace Link. This is a
+  candidate tool list derived one-to-one from the documented AirHub API
+  operations (developers.airspacelink.com), for building an MCP server.
+server:
+  name: airspace-link-airhub
+  transport: http
+tools:
+- name: get_oauth_token
+  description: Obtain an OAuth 2.0 client-credentials access token.
+  source_operation: api-31492994
+  scope: null
+- name: b4ufly_briefing_by_area
+  description: Get a B4UFLY airspace briefing for an area geometry (v2).
+  source_operation: api-29744367
+  scope: briefing:area:read
+- name: b4ufly_briefing_by_location
+  description: Get a B4UFLY airspace briefing for a point location (v2).
+  source_operation: api-29744368
+  scope: briefing:location:read
+- name: send_positions
+  description: Send positions to the Airspace Link position telemetry pipeline.
+  source_operation: api-29882511
+  scope: null
+- name: get_elevation
+  description: Get elevation for a location (v2).
+  source_operation: api-29882510
+  scope: null
+- name: list_operations
+  description: List ASL operations.
+  source_operation: api-29873889
+  scope: operation:read
+- name: create_operation
+  description: Create an ASL operation.
+  source_operation: api-29873890
+  scope: operation:create
+- name: get_operation
+  description: Get an ASL operation.
+  source_operation: api-29873891
+  scope: operation:read
+- name: update_operation
+  description: Update an ASL operation.
+  source_operation: api-29873893
+  scope: operation:update
+- name: delete_operation
+  description: Delete an ASL operation.
+  source_operation: api-29873892
+  scope: operation:delete
+- name: get_laanc_operation
+  description: Get a LAANC SDSP operation.
+  source_operation: api-10829370
+  scope: laanc:read
+- name: create_laanc_operation
+  description: Create a LAANC SDSP operation.
+  source_operation: api-10829372
+  scope: laanc:create
+- name: submit_laanc_authorization
+  description: Submit a LAANC authorization.
+  source_operation: api-29742696
+  scope: laanc:create
+- name: get_laanc_authorization
+  description: Get a LAANC authorization.
+  source_operation: api-29742697
+  scope: laanc:read
+- name: cancel_laanc_authorization
+  description: Cancel a LAANC authorization.
+  source_operation: api-29742698
+  scope: laanc:update
+- name: create_ephemeral_operation
+  description: Create ephemeral operations.
+  source_operation: api-29886782
+  scope: operation:create
+- name: claim_ephemeral_operation
+  description: Claim an ephemeral operation.
+  source_operation: api-29886785
+  scope: operation:read operation:create
+- name: classify_risk
+  description: Classify risk for a surface.
+  source_operation: api-31492643
+  scope: surface:create
+- name: generate_route
+  description: Generate a risk-aware drone route.
+  source_operation: api-31492641
+  scope: route:create
+- name: surface_hexbin
+  description: Generate a surface hexbin.
+  source_operation: api-31492639
+  scope: surface:create
+- name: get_surface_layer_access
+  description: Request surface-layer access.
+  source_operation: api-31256372
+  scope: surface:create

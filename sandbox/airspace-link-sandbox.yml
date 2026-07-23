@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: searched
+source: https://developers.airspacelink.com/doc-2002712
+docs: https://developers.airspacelink.com/doc-2002712
+mode_separation:
+  mechanism: base-url
+  detail: >-
+    The base URL determines whether a request runs in live mode or sandbox mode.
+    Credentials (client id / client secret / x-api-key) are supplied by Airspace
+    Link per environment.
+environments:
+- name: sandbox
+  api_base_url: https://airhub-api-sandbox.airspacelink.com
+  oauth_token_url: https://airhub-api-sandbox.airspacelink.com/v1/oauth/token
+  portal: https://portal-sandbox.airspacelink.com
+- name: live
+  api_base_url: https://airhub-api.airspacelink.com
+  portal: https://portal.airspacelink.com
+test_values:
+  note: >-
+    Airspace Link does not publish static magic test identifiers, test cards, or
+    fixture tokens; sandbox credentials are provisioned by Airspace Link on
+    request. No test values are invented here.

@@ -1,7 +1,17 @@
 aid: airspace-link
 name: Airspace Link
-description: Airspace Link is a company surfaced as a portfolio company of techstars and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Airspace Link provides digital infrastructure for safer skies, operating the
+  AirHub platform for drone and unmanned aircraft system (UAS) operations. Its
+  AirHub API is a REST service that delivers airspace awareness, FAA data, LAANC
+  authorizations, B4UFLY briefings, operational hazard and risk assessment,
+  routing, elevation, position telemetry, and vector tiles to power UAS
+  applications. Airspace Link also offers a Drone Operations Management System
+  (DOMS), FAA-approved Unmanned Traffic Management (UTM) services, and airspace
+  security capabilities for state and local governments, federal and defense
+  agencies, and commercial drone programs. The API authenticates with OAuth 2.0
+  client-credentials plus an API key and runs in separate sandbox and live
+  environments.
 url: https://raw.githubusercontent.com/api-evangelist/airspace-link/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +19,57 @@ x-backed-by:
 - techstars
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://airspacelink.com/favicon.ico
 tags:
 - Company
-apis: []
+- Drones
+- UAS
+- Airspace
+- Aviation
+- LAANC
+- UTM
+- Geospatial
+- Public Safety
+- Logistics
+apis:
+- name: AirHub API
+  description: >-
+    REST API delivering airspace data and services for UAS applications —
+    B4UFLY airspace briefings, LAANC SDSP operations and authorizations, ASL and
+    ephemeral operations, surface/risk/routing, elevation, position telemetry,
+    and vector tiles. Authenticated with OAuth 2.0 client-credentials plus an
+    x-api-key header, with separate sandbox and live base URLs.
+  humanURL: https://developers.airspacelink.com/
+  baseURL: https://airhub-api.airspacelink.com
+  tags:
+  - Drones
+  - UAS
+  - Airspace
+  - LAANC
+  - Briefing
+  - Routing
+  properties:
+  - type: Documentation
+    url: https://developers.airspacelink.com/
+  - type: APIReference
+    url: https://developers.airspacelink.com/
+  - type: GettingStarted
+    url: https://developers.airspacelink.com/doc-521691
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +78,60 @@ maintainers:
 common:
 - type: Website
   url: https://airspacelink.com/
+- type: DeveloperPortal
+  url: https://developers.airspacelink.com/
+- type: Documentation
+  url: https://developers.airspacelink.com/
+- type: APIReference
+  url: https://developers.airspacelink.com/
+- type: GettingStarted
+  url: https://developers.airspacelink.com/doc-521691
+- type: Support
+  url: https://support.airspacelink.com/
+- type: Blog
+  url: https://airspacelink.com/blog
+- type: StatusPage
+  url: https://status.airspacelink.com/
+- type: GitHubOrganization
+  url: https://github.com/airspace-link-inc
+- type: Pricing
+  url: https://airspacelink.com/pricing
+- type: SignUp
+  url: https://portal.airspacelink.com/
+- type: Login
+  url: https://portal.airspacelink.com/
+- type: TermsOfService
+  url: https://airspacelink.com/terms-conditions-api
+- type: PrivacyPolicy
+  url: https://airspacelink.com/privacy-policy
+- type: LLMsTxt
+  url: llms/airspace-link-llms.txt
+- type: Authentication
+  url: authentication/airspace-link-authentication.yml
+- type: OAuthScopes
+  url: scopes/airspace-link-scopes.yml
+- type: Conventions
+  url: conventions/airspace-link-conventions.yml
+- type: ErrorCatalog
+  url: errors/airspace-link-problem-types.yml
+- type: Sandbox
+  url: sandbox/airspace-link-sandbox.yml
+- type: Lifecycle
+  url: lifecycle/airspace-link-lifecycle.yml
+- type: MCPServer
+  url: mcp/airspace-link-mcp.yml
+- type: Conformance
+  url: conformance/airspace-link-conformance.yml
+- type: WellKnown
+  url: well-known/airspace-link-well-known.yml
+- type: DataModel
+  url: data-model/airspace-link-data-model.yml
+- type: DomainSecurity
+  url: security/airspace-link-domain-security.yml
+- type: AgentSkill
+  url: skills/_index.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
