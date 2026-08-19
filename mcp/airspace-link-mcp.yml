@@ -2,10 +2,9 @@ generated: '2026-07-18'
 method: derived
 status: candidate
 source: https://developers.airspacelink.com/llms.txt
-note: >-
-  No official hosted/remote MCP server was found for Airspace Link. This is a
-  candidate tool list derived one-to-one from the documented AirHub API
-  operations (developers.airspacelink.com), for building an MCP server.
+note: No official hosted/remote MCP server was found for Airspace Link. This is a candidate tool list
+  derived one-to-one from the documented AirHub API operations (developers.airspacelink.com), for building
+  an MCP server.
 server:
   name: airspace-link-airhub
   transport: http
@@ -94,3 +93,9 @@ tools:
   description: Request surface-layer access.
   source_operation: api-31256372
   scope: surface:create
+deployment:
+  mode: none
+  verified: derived
+  tools: 21
+  checked: '2026-08-12'
+  source: catalog MCP census
